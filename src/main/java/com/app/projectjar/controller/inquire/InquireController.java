@@ -14,4 +14,5 @@ public class InquireController {
     public void inquireList(){}
     @GetMapping("write")
     public void inquireWrite(){}
+//     민구 왔다감ㅋㅋ
 }
