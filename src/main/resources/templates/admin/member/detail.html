@@ -41,7 +41,7 @@
                     <div class="prev-button-layout">
                         <div>
                             <a th:href="@{/admin/member/list}">
-                                <img src="/image/admin/prev_icon.png"
+                                <img style="top: -2px;" src="/image/admin/prev_icon.png"
                                     class="prev-icon">
                                 <span class="prev-title">리스트로 돌아가기</span>
                             </a>
@@ -108,14 +108,14 @@
                                 <div class="info-margin">
                                     <span class="info-tag">가입일</span>
                                     <!-- 유저 가입날짜  -->
-                                    <h4 th:text="${#temporals.format(memberDTO.createdDate, 'yyyy-MM-dd')}">2023.01.01</h4>
+                                    <h4 style="margin-top: 8px; font-size: 12px;" th:text="${#temporals.format(memberDTO.createdDate, 'yyyy-MM-dd')}">2023.01.01</h4>
                                 </div>
                                 <div class="info-margin margin">
                                     <!-- 유저 작성한 것들  -->
                                     <hr style="margin: 8px 0;">
                                     <span class="info-tag">챌린지</span>
                                     <div class="info-margin">
-                                        <div class="write-count-box">
+                                        <div class="write-count-box" style="margin-top: 10px;">
                                             <div>
                                                 <span>참여한 개인 챌린지</span>
                                             </div>
@@ -125,7 +125,7 @@
                                         </div>
                                     </div>
                                     <div class="info-margin">
-                                        <div class="write-count-box">
+                                        <div class="write-count-box" style="margin-top: 10px;">
                                             <div>
                                                 <span>참여한 그룹 챌린지</span>
                                             </div>
@@ -164,11 +164,11 @@
         let text = '';
         if (fileDTO == undefined || fileDTO == null) {
             text = `
-                    <img style="width: 100%; object-fit: cover; height="100%;" src="/image/logo/normal_profile.png">
+                    <img style="width: 100%; object-fit: cover; height :100%;" src="/image/logo/normal_profile.png">
         `;
         }else {
             text = `
-                        <img style="width: 100%; object-fit: cover; height="100%;" src="/file/display?fileName=${fileDTO.filePath}/${fileDTO.fileUuid}_${fileDTO.fileOriginalName}">
+                        <img style="width: 100%; object-fit: cover; height :100%; border-radius: 50%;" src="/file/display?fileName=${fileDTO.filePath}/${fileDTO.fileUuid}_${fileDTO.fileOriginalName}">
                   `;
         }
         $(".member-img").append(text);

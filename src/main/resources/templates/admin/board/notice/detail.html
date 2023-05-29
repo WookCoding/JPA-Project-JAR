@@ -44,7 +44,7 @@
                             <a th:href="@{/admin/board/notice/list}">
                                 <img src="/image/admin/prev_icon.png" class="prev-icon">
                             </a>
-                            <span class="prev-title">리스트로 돌아가기</span>
+                            <a th:href="@{/admin/board/notice/list}" class="prev-title">리스트로 돌아가기</a>
                         </div>
                     </div>
 
@@ -58,7 +58,6 @@
                             </div>
                             <div class="info-table">
                                 <div class="info-member to_list">
-                                    <span>목록으로</span>
                                     <span class="span-bold">제목 :</span>
                                     <!-- 제목  -->
                                     <span th:text="${noticeDTO.noticeTitle}">[공지]

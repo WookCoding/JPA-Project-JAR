@@ -19,8 +19,6 @@
             list: list,
         }
     })();
-    getList();
-
 
     // 리스트 가져오는 함수
     // function getList(boardType) {
@@ -108,8 +106,7 @@
         });
         return text;
     }
-
-    //
+getSuggestList();
 
 
     // 좋아요 상태를 확인하는 함수
@@ -135,7 +132,7 @@
         });
     }
 
-function getList(){
+function getSuggestList(){
     suggestService.list(function(list){
         globalThis.suggestLength = list.length;
         if(globalThis.suggestLength  < 5){
